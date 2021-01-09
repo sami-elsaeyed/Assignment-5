@@ -30,3 +30,10 @@ document.getElementsByTagName("button")[2].addEventListener("click",function(eve
     lastr[lastr.length-1].parentNode.removeChild(lastr[lastr.length-1]);
 
 })
+document.getElementsByTagName("button")[3].addEventListener("click",function(event){
+    let rows= document.getElementsByClassName("row")
+    for(let i=0;i<rows.length;i++){
+        rows[i].removeChild(rows[i].lastChild);
+    }
+    colcount--;
+})
