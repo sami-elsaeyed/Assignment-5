@@ -25,3 +25,8 @@ document.getElementsByTagName("button")[1].addEventListener("click",function(eve
     }
     colcount++
 })
+document.getElementsByTagName("button")[2].addEventListener("click",function(event){
+    let lastr = document.getElementsByTagName("tr");
+    lastr[lastr.length-1].parentNode.removeChild(lastr[lastr.length-1]);
+
+})
