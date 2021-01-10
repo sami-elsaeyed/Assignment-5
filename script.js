@@ -40,3 +40,9 @@ document.getElementsByTagName("button")[3].addEventListener("click",function(eve
     }
     colcount--;
 })
+document.getElementsByTagName("button")[4].addEventListener("click",function(event){
+    let cells =document.getElementsByTagName("tr");
+    for (let i of cells){
+        i.style.backgroundColor=document.getElementById("colors").value;
+    }
+})
