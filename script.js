@@ -1,27 +1,30 @@
 colcount=0;
+function cell(){
+        let single =document.createElement("td")
+        single.addEventListener("mousedown",function(event){single.style.backgroundColor=document.getElementById("colors").value})
+        return single
+}
 document.getElementsByTagName("button")[0].addEventListener("click",function(event){
-    let cols=document.getElementsByClassName("column");
     if(colcount===0){
-        let cell=document.createElement("tr");
-        cell.classList.add("row");
-        cell.appendChild(document.createElement("td"));
-        document.getElementById("space").appendChild(cell); 
+        let row=document.createElement("tr");
+        row.classList.add("row");
+        row.appendChild(cell());
+        document.getElementById("space").appendChild(row); 
         colcount++;   
     }
     else {
-        let cell=document.createElement("tr");
-        cell.classList.add("row");
+        let row=document.createElement("tr");
+        row.classList.add("row");
         for(let i=0;i<colcount;i++){
-            cell.appendChild(document.createElement("td"));
+            row.appendChild(cell());
         }
-        document.getElementById("space").appendChild(cell);
+        document.getElementById("space").appendChild(row);
     }
 })
 document.getElementsByTagName("button")[1].addEventListener("click",function(event){
     let rows= document.getElementsByClassName("row")
     for(let i=0;i<rows.length;i++){
-        let col=document.createElement("td");
-        rows[i].appendChild(col);
+        rows[i].appendChild(cell());
     }
     colcount++
 })
