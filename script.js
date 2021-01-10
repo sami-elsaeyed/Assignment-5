@@ -41,8 +41,14 @@ document.getElementsByTagName("button")[3].addEventListener("click",function(eve
     colcount--;
 })
 document.getElementsByTagName("button")[4].addEventListener("click",function(event){
-    let cells =document.getElementsByTagName("tr");
+    let cells =document.getElementsByTagName("td");
     for (let i of cells){
         i.style.backgroundColor=document.getElementById("colors").value;
+    }
+})
+document.getElementsByTagName("button")[5].addEventListener("click",function(event){
+    let cells2 =document.getElementsByTagName("td");
+    for(let f of cells2){
+            f.style.backgroundColor="";
     }
 })
