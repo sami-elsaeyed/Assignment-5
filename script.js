@@ -52,3 +52,11 @@ document.getElementsByTagName("button")[5].addEventListener("click",function(eve
             f.style.backgroundColor="";
     }
 })
+document.getElementsByTagName("button")[6].addEventListener("click",function(event){
+    let cell3 =document.getElementsByTagName("td");
+    for(let g of cell3){
+        if(g.style.backgroundColor===""){
+            g.style.backgroundColor=document.getElementById("colors").value;}
+}
+
+})
