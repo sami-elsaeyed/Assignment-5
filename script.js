@@ -1,7 +1,15 @@
+let drag=false
 colcount=0;
 function cell(){
         let single =document.createElement("td")
-        single.addEventListener("mousedown",function(event){single.style.backgroundColor=document.getElementById("colors").value})
+        single.addEventListener("mousedown",function(event){
+            single.style.backgroundColor=document.getElementById("colors").value;
+            drag=true;
+    })
+        single.addEventListener("mouseover",function(event){
+            if(drag){
+            single.style.backgroundColor=document.getElementById("colors").value}})
+    
         return single
 }
 document.getElementsByTagName("button")[0].addEventListener("click",function(event){
